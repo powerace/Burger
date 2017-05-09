@@ -14,6 +14,9 @@ var methodOverride = require("method-override");
 var app = express();
 var PORT = process.env.PORT || 8888;
 
+
+app.use(bodyParser.urlencoded({ extended: false }));
+
 // Override with POST having ?_method=DELETE
 app.use(methodOverride("_method"));
 
