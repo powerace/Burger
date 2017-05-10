@@ -8,7 +8,7 @@ var orm = {
     });
 	},
 	insertOne: function(table, column1, column2, col1value, col2value){
-		var queryString = "INSERT INTO ?? ( ?? ?? ) VALUES ( ? ? )";
+		var queryString = "INSERT INTO ?? ( ?? , ?? ) VALUES ( ? , ? )";
     connection.query(queryString, [table, column1, column2, col1value, col2value], function(err, result) {
       console.log(result);
     });

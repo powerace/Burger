@@ -9,8 +9,8 @@ router.get("/", function(req, res) {
 
 router.post("/", function(req, res) {
   burger.insertOne( "burger_name", "devoured",
-    req.body.burger_name, req.body.devoured
-  , function() {
+    req.body.burger_name, 0 
+  , function(res) {
     res.redirect("/");
   });
 });
